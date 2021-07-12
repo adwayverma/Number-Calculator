@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcuator</title>
+	<script type="text/javascript" src="Calculator External JS.js">
+		
+	</script>
+    <style type="text/css">
+			#frame
+			{
+				background-color:  white;
+				width: 50%;
+				height: 30%;
+				border: 10px inset darkgray;
+				margin-left: 25%;
+				background-image: url(https://cutewallpaper.org/21/blue-electric-background/Electric-Lighting-Energy-Animation-Blue-Color-Can-be-used-as-background-or-over-layer-blending-mode-ex-Add-Overlay-Screen-mode.png);
+				background-size: 100%;
+			}
+			table
+			{
+				width: 100%;
+				height: 30%;
+			}
+			td
+			{
+				background-color: #42ecf5;
+				color: black;
+				font-weight: bold;	
+				font-size: 110%;
+				text-align: center;
+				border: 5px ridge gray;
+				width: 15%;
+				height: 8%;
+			}
+			input{
+				width: 100%;
+				height: 100%;
+				background-color: #42ecf5;
+				color: black;
+				font-weight: bold;	
+				font-size: 180%;
+				text-align: center;
+				padding: 20% 30% 20% 30%;
+			}
+			#res
+			{
+				background-color: white;
+				margin: 3%;
+				width: 75.4%;
+				height: 5%;
+				border: 10px inset darkgray;
+				padding: 0;
+				margin-left: 10.5%;
+				background-color: #0023bf;
+			}
+    </style>
+</head>
+<body>
+	<div id="frame">
+		<form name="calculator">
+		<input id="res" disabled type="text" name="display">
+		<table style="text-align: center;" cellspacing="10%">
+			<tr>
+				<td><input type="button" value="%" onclick="calculator.display.value=calculator.display.value+'7'"/></td>
+				<td><input type="button" value="C" onclick="calculator.display.value=null"/></td>
+                <td><input type="button" id="deleten" value="&#x232B;" onclick="var p=calculator.display.value.length; calculator.display.value=calculator.display.value.substring(0, p-1)"/></td>
+                <td><input type="button" value="=" onclick="calculator.display.value=eval(calculator.display.value)"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="1/x" onclick="calculator.display.value=calculator.display.value+'1/x'"/></td>
+				<td><input type="button" value="x2" onclick="calculator.display.value=calculator.display.value+'x2'"/></td>
+				<td><input type="button" value="2/x" onclick="calculator.display.value=calculator.display.value+'2x'"/></td>
+				<td><input type="button" value="/" onclick="calculator.display.value=calculator.display.value+'/'"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="7" onclick="calculator.display.value=calculator.display.value+'7'"/></td>
+				<td><input type="button" value="8" onclick="calculator.display.value=calculator.display.value+'8'"/></td>
+				<td><input type="button" value="9" onclick="calculator.display.value=calculator.display.value+'9'"/></td>
+			    <td><input type="button" value="X" onclick="calculator.display.value=calculator.display.value+'*'"/></td>			
+			</tr>
+			<tr>
+				<td><input type="button" value="4" onclick="calculator.display.value=calculator.display.value+'4'"/></td>
+				<td><input type="button" value="5" onclick="calculator.display.value=calculator.display.value+'5'"/></td>
+				<td><input type="button" value="6" onclick="calculator.display.value=calculator.display.value+'6'"/></td>
+				<td><input type="button" value="-" onclick="calculator.display.value=calculator.display.value+'-'"/></td>			
+			</tr>
+			<tr>
+				<td><input type="button" value="1" onclick="calculator.display.value=calculator.display.value+'1'"/></td>
+				<td><input type="button" value="2" onclick="calculator.display.value=calculator.display.value+'2'"/></td>
+				<td><input type="button" value="3" onclick="calculator.display.value=calculator.display.value+'3'"/></td>
+				<td><input type="button" value="+" onclick="calculator.display.value=calculator.display.value+'+'"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="+/-"onclick="calculator.display.value=calculator.display.value+'+/-'"/></td>
+				<td><input type="button" value="0" onclick="calculator.display.value=calculator.display.value+'0'"/></td>
+				<td><input type="button" value="." onclick="calculator.display.value=calculator.display.value+'.'"/></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>
